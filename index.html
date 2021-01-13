@@ -24,9 +24,62 @@
       </p>
     </header>
     <main class="col-12 col-lg-9">
-      <div class="m-5">
-        <h2>To Do</h2>
-        <ul id="list-toDo" class="list-group"> </ul>
+      <div class="m-5 row justify-content-around">
+        <!-- Start of "To Do" column -->
+        <div class = "col-12 col-md-6 col-xl-3 mb-3">
+          <div class = "card">
+            <h4 class = "card-header">To Do</h4>
+            <ul id="list-toDo" class="list-group list-group-flush">
+              <li class = "list-group-item">
+                <span class = "badge badge-primary badge-pill">05/28/2020</span>
+                <p class = "m-1">Sample task to do</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End of "To Do" column -->
+        
+        <!-- Start of "In Progress" column -->
+        <div class = "col-12 col-md-6 col-xl-3 mb-3" >
+          <div class = "card">
+            <h4 class = "card-header"> In Progress</h4>
+            <ul id = "list-inProgress" class = "list-group list-group-flush">
+              <li class = "list-group-item">
+                <span class = "badge badge-primary badge-pill">05/28/2020</span>
+                <p class = "m-1">Sample task in progress</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End of "In Progress" column -->
+
+        <!-- Start of "In Review" column -->
+        <div class = "col-12 col-md-6 col-xl-3 mb-3">
+          <div class = "card">
+            <h4 class = "card-header">In Review</h4>
+            <ul id = "list-inReview" class = "list-group list-group-flush">
+              <li class = "list-group-item">
+                <span class = "badge badge-primary badge-pill">05/28/2020</span>
+                <p class = "m-1">Sample task in review</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End of "In Review" column -->
+
+        <!-- Start of "Done" column -->
+        <div class = "col-12 col-md-6 col-xl-3 mb-3">
+          <div class = "card">
+            <h4 class = "card-header">Done</h4>
+            <ul id = "list-done" class = "list-group list-group-flush">
+              <li class = "list-group-item">
+                <span class = "badge badge-primary badge-pill">05/28/2020</span>
+                <p class = "m-1">Sample task that's done</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End of "Done" column -->
       </div>
     </main>
   </div>
@@ -42,21 +95,21 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class = "modal-body">
           <form>
-            <div class="form-group">
-              <label for="modalTaskDescription">Task description</label>
-              <textarea id="modalTaskDescription" rows="3"></textarea>
+            <div class = "form-group">
+              <label for = "modalTaskDescription">Task description</label>
+              <textarea id = "modalTaskDescription" rows = "3" class = "form-control"></textarea>
             </div>
-            <div class="form-group">
-              <label for="modalDueDate">Due date</label>
-              <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+            <div class = "form-group">
+              <label for = "modalDueDate">Due date</label>
+              <input type = "text" class = "form-control" id = "modalDueDate" placeholder = "mm/dd/yyyy" autocomplete = "off" />
             </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save Task</button>
+        <div class = "modal-footer">
+          <button type = "button" class = "btn btn-secondary" data-dismiss = "modal">Close</button>
+          <button type = "button" class = "btn btn-primary">Save Task</button>
         </div>
       </div>
     </div>
