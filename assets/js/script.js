@@ -207,5 +207,13 @@ $( ".list-group" ).on( "blue", "input[type = 'text' ]", function() {
 
 
 
+
+// Turn task columns to be sortable
+$( ".card .list-group").sortable( {
+  connectWith: $( ".card. list-group" )
+});
+
+
+
 // load tasks for the first time
 loadTasks();
