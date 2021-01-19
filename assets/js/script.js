@@ -1,5 +1,6 @@
 var tasks = {};
 
+
 var createTask = function( taskText, taskDate, taskList ) {
   // create elements that make up a task item
   var taskLi = $( "<li>").addClass("list-group-item" );
@@ -9,13 +10,13 @@ var createTask = function( taskText, taskDate, taskList ) {
   var taskP = $( "<p>" ).addClass( "m-1" ).text( taskText );
 
   // append span and p element to parent li
-  taskLi.append( taskSpan, taskP );
+  taskLi.append(taskSpan, taskP);
 
   // Check due date
   auditTask( taskLi );
 
   // append to ul list on the page
-  $( "#list-" + taskList ).append( taskLi );
+  $("#list-" + taskList).append(taskLi);
 };
 
 var loadTasks = function() {
@@ -46,6 +47,7 @@ var saveTasks = function() {
 };
 
 // enable draggable/sortable feature on list-group elements
+
 $( ".card .list-group" ).sortable({
   // enable dragging across lists
   connectWith: $( ".card .list-group" ),
@@ -97,8 +99,8 @@ $( ".card .list-group" ).sortable({
     tasks[ arrName ] = tempArr;
     saveTasks();
   },
-  stop: function( event ) {
-    $( this ).removeClass( "dropover" );
+  stop: function(event) {
+    $(this).removeClass("dropover");
   }
 });
 
@@ -185,10 +187,10 @@ $(".list-group").on("blur", "textarea", function() {
     .closest(".list-group-item")
     .index();
 
+
   // update task in array and re-save to localstorage
   tasks[status][index].text = text;
   saveTasks();
-
   // recreate p element
   var taskP = $("<p>")
     .addClass("m-1")
