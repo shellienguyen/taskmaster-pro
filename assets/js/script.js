@@ -260,6 +260,9 @@ let auditTask = function( taskEl ) {
   // Get date from task element
   let date = $( taskEl ).find( "span" ).text().trim();
 
+  console.log( taskEl );
+
+
   // Convert to moment object at 5:00PM
   let time = moment( date, "L" ).set( "hour", 17 );
 
@@ -296,6 +299,13 @@ let auditTask = function( taskEl ) {
   //  but at 5:00pm on that date
   console.log( time );
 };
+
+// Update task status every 30 minutes
+setInterval( function() {
+  $( ".card .list-group-item" ).each( function( index, el ) {
+    auditTask( el );
+  });
+}, ( 1000 * 60 ) * 30 );
 
 // load tasks for the first time
 loadTasks();
